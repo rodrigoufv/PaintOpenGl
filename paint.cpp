@@ -1,12 +1,4 @@
 /*
-   Primeiro trabalho de INF 390 - Computacao Grafica
-   
-   Nomes : * Rodrigo Sidney Pereira      Matricula : 61939
-           * Danilo GonÁalves Vicente    Matricula : 69073
-   
-   Periodo : 2014-2
-   Data : Setembro/Outubro 
-   Data limite para entrrega : 
    Arquivo : retangulos.cpp
    Descricao : Programa que possui funcionalidades para o desenho de figuras geometricas 
                apresentando a possibilidade de escolher entre varias figuras, cores,
@@ -263,7 +255,7 @@ void menuContorno ( void );
 // Desenha o menu de Opcoes
 void menuOpcoes ( void );
 
-// Gerenciamento do menu com as opÁıes de cores           
+// Gerenciamento do menu com as op√ß√µes de cores           
 void MenuPrimitiva(int op);
 
 // Funcao responsavel por desenhar o menu de primitivas
@@ -299,10 +291,10 @@ void trocaGLfloat ( GLfloat &A, GLfloat &B );
 // ######################################## MAIN #############################################
 
 
-/*  Define o tamanho inicial e a posiÁ„o  da janela e o modo de "display" 
- *  (single buffer e RGB).  Abre a janela com o tÌtulo Retangulos 
- *  Chama as rotinas de inicializaÁ„o  
- *  Registra as funÁıes de callback.
+/*  Define o tamanho inicial e a posi√ß√£o  da janela e o modo de "display" 
+ *  (single buffer e RGB).  Abre a janela com o t√≠tulo Retangulos 
+ *  Chama as rotinas de inicializa√ß√£o  
+ *  Registra as fun√ß√µes de callback.
  *  Entra no loop principal e processa os eventos.
  */
 
@@ -760,7 +752,7 @@ void desenhaRetanguloEmpty( GLfloat x1, GLfloat y1, GLfloat x2, GLfloat y2 ){
 
 // Desenha um triangulo na tela dados os pontos inicial e final
 void desenhaTrianguloFull( GLfloat x1, GLfloat y1, GLfloat x2, GLfloat y2 ){
-  	// Desenha um ret‚ngulo com a cor corrente
+  	// Desenha um ret√¢ngulo com a cor corrente
   	
   	if ( x2 < x1 ) trocaGLfloat ( x1, x2 );
   	if ( y2 > y1 ) trocaGLfloat ( y1, y2 );
@@ -774,7 +766,7 @@ void desenhaTrianguloFull( GLfloat x1, GLfloat y1, GLfloat x2, GLfloat y2 ){
 
 // Desenha um triangulo na tela dados os pontos inicial e final
 void desenhaTrianguloEmpty( GLfloat x1, GLfloat y1, GLfloat x2, GLfloat y2 ){
-  	// Desenha um ret‚ngulo com a cor corrente
+  	// Desenha um ret√¢ngulo com a cor corrente
   	
   	if ( x2 < x1 ) trocaGLfloat ( x1, x2 );
   	if ( y2 > y1 ) trocaGLfloat ( y1, y2 );
@@ -1189,7 +1181,7 @@ void selecionaFigura ( GLfloat x, GLfloat y ){
 	//glFlush();
 }
 
-// Gerenciamento do menu com as opÁıes de cores           
+// Gerenciamento do menu com as op√ß√µes de cores           
 void MenuPrimitiva(int op){
    switch(op) {
             case 0:
@@ -1298,7 +1290,7 @@ void CriaMenu() {
     glutAddMenuEntry("Refazer",1);
     glutAddMenuEntry("Limpar tudo",2);
     glutAddMenuEntry("Sair",3);
-    glutAddMenuEntry("Calcular ¡rea",4);
+    glutAddMenuEntry("Calcular √Årea",4);
     glutAddSubMenu("Salvar",submenu2);
     glutAddSubMenu("Carregar",submenu3);   
     
@@ -1312,7 +1304,7 @@ void init (void) {
     // Define a cor de background da janela 
     glClearColor (1.0, 1.0, 1.0, 0.0);
 
-    // Define o sistema de visualizaÁ„o - tipo de projeÁ„o
+    // Define o sistema de visualiza√ß√£o - tipo de proje√ß√£o
     glMatrixMode(GL_PROJECTION);
     glLoadIdentity();
     glOrtho(0.0, window_w, 0.0, window_h, -1.0, 1.0);
